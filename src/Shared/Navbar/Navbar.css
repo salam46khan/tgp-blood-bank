@@ -1,0 +1,77 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-duration: 0.7s;
+    animation-name: fadeInDown;
+    animation-timing-function: ease-out;
+    background: #fff;
+    box-shadow: 2px 2px 5px #53010132;
+    color: #DD0000;
+}
+
+.startNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+
+
+
+
+
+
+#NavItems ul li a.active {
+    font-weight: 600;
+    color: #0891B2;
+    background: none;
+}
+
+
+#NavItems ul li a:hover {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+#NavItems ul li a:focus {
+    background: none;
+}
+
+#NavItems ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 0;
+    background: #0891B2;
+    /* z-index: -1; */
+    transition: ease-in-out 0.3s;
+    /* overflow: hidden; */
+}
+
+#NavItems ul li a:hover:after {
+    height: 8%;
+    width: 100%;
+}
+
+#NavItems ul li a.active::after {
+    height: 8%;
+    width: 100%;
+}
