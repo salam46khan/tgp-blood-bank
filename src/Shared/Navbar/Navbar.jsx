@@ -22,11 +22,11 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className={`headerMain ${scroll ? "sticky" : "startNav"}`}>
+        <div className={`headerMain z-50 ${scroll ? "sticky" : "startNav"}`}>
             <div className="navbar px-4 " id="NavItems">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="lg:hidden h-10 w-10 flex justify-center items-center text-xl bg-red-400 rounded-full hover:bg-red-500 duration-200">
+                        <div tabIndex={0} role="button" className="lg:hidden h-10 w-10 flex justify-center items-center text-xl bg-red-200 rounded-full hover:bg-red-500 duration-200">
                             <FaBars></FaBars>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 header-nav">

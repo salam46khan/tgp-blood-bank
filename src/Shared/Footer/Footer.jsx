@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div className="py-14 px-3 bg-cyan-950 relative">
-            <div className="md:absolute top-0 left-1/2 w-full max-w-5xl p-5 md:-translate-x-1/2 md:-translate-y-1/2 bg-cyan-600 rounded-md shadow-xl shadow-black">
+            <div className="md:absolute top-0 left-1/2 w-full lg:max-w-5xl md:max-w-4xl p-5 md:-translate-x-1/2 md:-translate-y-1/2 bg-cyan-600 rounded-md shadow-xl shadow-black">
                 <div className="flex flex-col md:flex-row items-center py-3 justify-between">
                     <div>
                         <p className="font-bold text-2xl text-white">Are you ready for donate?</p>
@@ -77,6 +77,10 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
+            </div>
+            <div className="py-3">
+                <hr />
+                <p className="text-center text-slate-200 pt-2">&copy; 2024 T.G.P Blood Bank. All rights reserved.</p>
             </div>
         </div>
     );

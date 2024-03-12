@@ -47,6 +47,7 @@
     position: relative;
     z-index: 1;
     background: transparent;
+    color: #ddd;
 }
 
 #NavItems ul li a:focus {
