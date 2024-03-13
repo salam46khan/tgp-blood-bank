@@ -36,7 +36,8 @@ const Banner = () => {
                     </div>
                 </Slider>
             </div>
-            <div className="absolute top-0 left-0 h-full w-full  bg-gradient-to-br from-[#400b0bc3] to-[#0000006a]">
+            {/* linear-gradient(120deg, #0000006e, #0000002e) */}
+            <div className="absolute top-0 left-0 h-full w-full  bg-gradient-to-br from-[#000000c1] to-[#0000002e]">
                 <div className="w-full md:max-w-4xl mx-auto flex flex-col justify-center items-center text-center h-full text-white gap-2 p-3">
                     <div className="inline-block relative">
                         <div className="absolute bottom-0 right-3 bg-cyan-600 z-10 h-5 w-5 -rotate-45 translate-y-1/2"></div>

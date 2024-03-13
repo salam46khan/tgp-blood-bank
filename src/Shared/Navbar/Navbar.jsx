@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import './Navbar.css'
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../public/T.G.P.png';
 import { FaBars, FaUser } from "react-icons/fa6";
+import { AuthContext } from "../../Profider/AuthProvider";
 
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext)
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -46,10 +48,19 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="flex gap-1 items-center h-10 w-10 md:w-auto md:px-6 justify-center text-xl bg-red-200 rounded-full hover:bg-red-500 hover:text-white duration-300" to={'/login'}>
-                        <FaUser />
-                        <span className="hidden md:inline-block">Login</span>
-                    </Link>
+                    {
+                        user ?
+                            <Link className="flex gap-1 items-center h-10 w-10 md:w-auto md:px-6 justify-center text-xl bg-red-200 rounded-full hover:bg-red-500 hover:text-white duration-300" to={'/profile'}>
+                                <img className="h-6 w-6 rounded-full" src={user?.photoURL} alt="" />
+                                <span className="hidden md:inline-block uppercase">{user?.displayName}</span>
+                            </Link>
+                            :
+                            <Link className="flex gap-1 items-center h-10 w-10 md:w-auto md:px-6 justify-center text-xl bg-red-200 rounded-full hover:bg-red-500 hover:text-white duration-300" to={'/login'}>
+                                <FaUser />
+                                <span className="hidden md:inline-block">Login</span>
+                            </Link>
+                    }
+
                 </div>
             </div>
         </div>

@@ -1,26 +1,45 @@
 import { Link } from 'react-router-dom';
 import loginPic from '../../assets/pic/login.png'
 import GoogleLogin from './GoogleLogin';
+import { useContext } from 'react';
+import { AuthContext } from '../../Profider/AuthProvider';
 const Login = () => {
 
+    const {logInUser} = useContext(AuthContext)
+    const handleLogin = event =>{
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        // console.log('log', email, password);
+
+        logInUser(email, password)
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    }
     return (
-        <div className="reg-bg py-14 min-h-screen px-3">
+        <div className="reg-bg py-14 min-h-screen px-3 pb-20">
             <div className="container mx-auto flex justify-center items-center mt-10">
                 <div className="w-full md:w-1/2 flex justify-center">
                     <div className='w-full max-w-sm bg-white shadow-lg shadow-slate-500 rounded-lg p-3 py-10'>
                         <p className='text-2xl font-bold text-center text-cyan-600'>Login here</p>
-                        <form className='p-3'>
+                        <form onSubmit={handleLogin} className='p-3'>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" className="input input-bordered rounded-full" required />
+                                <input type="email" name='email' placeholder="email" className="input input-bordered rounded-full" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" className="input input-bordered rounded-full" required />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered rounded-full" required />
                             </div>
                             <div className="form-control mt-3">
                                 <div className='my-btn flex justify-center'>
