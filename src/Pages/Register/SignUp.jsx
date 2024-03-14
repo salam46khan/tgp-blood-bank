@@ -4,10 +4,12 @@ import GoogleLogin from './GoogleLogin';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Profider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 const SignUp = () => {
     const { createUser } = useContext(AuthContext)
     const [error, setError] = useState('')
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic()
 
     // get img link from imgbb ----------------------------------------
     const [image, setImage] = useState(null);
@@ -59,8 +61,17 @@ const SignUp = () => {
                     displayName: name,
                     photoURL
                 })
-
-                navigate('/')
+                const userInfo = {
+                    name, 
+                    email,
+                    position: 'Member'
+                }
+                axiosPublic.post('/users', userInfo)
+                .then(res => {
+                    console.log(res.data);
+                    navigate('/')
+                })
+                
             })
             .catch(error => {
                 setError(error.message)

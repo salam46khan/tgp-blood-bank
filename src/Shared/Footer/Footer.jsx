@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div className="py-14 px-3 bg-cyan-950 relative">
-            <div className="md:absolute top-0 left-1/2 w-full lg:max-w-5xl md:max-w-4xl p-5 md:-translate-x-1/2 md:-translate-y-1/2 bg-cyan-600 rounded-md shadow-xl shadow-black">
+            <div className="md:absolute top-0 left-1/2 w-full lg:max-w-4xl md:max-w-4xl p-5 md:-translate-x-1/2 md:-translate-y-1/2 bg-cyan-600 rounded-md shadow-xl shadow-black">
                 <div className="flex flex-col md:flex-row items-center py-3 justify-between">
                     <div>
                         <p className="font-bold text-2xl text-white">Are you ready for donate?</p>
-                        <p className="text-slate-200">Let's get Start!</p>
+                        <p className="text-slate-200">Let&apos;s get Start!</p>
                     </div>
                     <div>
                         <Link className="my-btn-white" to={'/'}>

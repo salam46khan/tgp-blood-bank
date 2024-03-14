@@ -38,7 +38,8 @@ const Banner = () => {
             </div>
             {/* linear-gradient(120deg, #0000006e, #0000002e) */}
             <div className="absolute top-0 left-0 h-full w-full  bg-gradient-to-br from-[#000000c1] to-[#0000002e]">
-                <div className="w-full md:max-w-4xl mx-auto flex flex-col justify-center items-center text-center h-full text-white gap-2 p-3">
+                <div className="w-full md:max-w-4xl mx-auto flex flex-col justify-center items-center text-center h-full text-white gap-2 p-3"
+                >
                     <div className="inline-block relative">
                         <div className="absolute bottom-0 right-3 bg-cyan-600 z-10 h-5 w-5 -rotate-45 translate-y-1/2"></div>
                         <p className="px-4 py-1 z-20 relative bg-cyan-600">
@@ -47,14 +48,14 @@ const Banner = () => {
                     </div>
 
                     <p className="md:text-6xl text-4xl font-extrabold text-red-500">T<span className="text-white">.</span>G<span className="text-white">.</span>P <span className="text-white">Blood</span>Bank</p>
-                    <p className="w-full max-w-xl text-lg text-slate-200">
+                    <p className="w-full max-w-xl text-xl py-2 text-slate-200">
                         Where every drop saves a life. Join our mission of hope and healing through blood donation.
                     </p>
                     <div className="flex gap-3">
                         <Link className="flex gap-2 items-center justify-center my-btn" to={'/signup'}><FaUserTag />Join</Link>
                         <Link className="flex gap-2 items-center justify-center my-btn-fil" to={'/signup'}><FaSearch />Search</Link>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

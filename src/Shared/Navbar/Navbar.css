@@ -32,10 +32,10 @@
 
 
 
-
-
-
-
+#NavItems ul li a {
+    font-weight: 500;
+    font-size: 20px;
+}
 #NavItems ul li a.active {
     font-weight: 600;
     color: #0891B2;
