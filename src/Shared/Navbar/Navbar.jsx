@@ -22,6 +22,22 @@ const Navbar = () => {
         <li>
             <NavLink to={'/about'}>About</NavLink>
         </li>
+        <li>
+            <NavLink to={'/donors'}>Donors</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/donation-req'}>Donation Request</NavLink>
+        </li>
+        {
+            user ?
+            <li>
+                <NavLink to={'dashboard/profile'}>Dashboard</NavLink>
+            </li>
+            : ''
+        }
+        <li>
+            <NavLink to={'/blog'}>Blog</NavLink>
+        </li>
     </>
     return (
         <div className={`headerMain z-50 ${scroll ? "sticky" : "startNav"}`}>

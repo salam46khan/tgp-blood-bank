@@ -2,6 +2,7 @@ import AboutSec from "./AboutSec";
 import Banner from "./Banner";
 import BloodGroupSec from "./BloodGroupSec";
 import FaqSec from "./FaqSec";
+import ReviewSec from "./ReviewSec";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <BloodGroupSec></BloodGroupSec>
 
             <FaqSec></FaqSec>
+            <ReviewSec></ReviewSec>
         </div>
     );
 };

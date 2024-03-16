@@ -62,16 +62,27 @@ const SignUp = () => {
                     photoURL
                 })
                 const userInfo = {
-                    name, 
+                    name,
                     email,
+                    avatar: photoURL,
                     position: 'Member'
                 }
                 axiosPublic.post('/users', userInfo)
-                .then(res => {
-                    console.log(res.data);
-                    navigate('/')
-                })
-                
+                    .then(res => {
+                        console.log(res.data);
+                        navigate('/')
+                    })
+
+                const donorInfo = {
+                    name,
+                    email,
+                    stauts: 'pending'
+                }
+                axiosPublic.post('/donor', donorInfo)
+                    .then(res => {
+                        console.log(res.data);
+                    })
+
             })
             .catch(error => {
                 setError(error.message)

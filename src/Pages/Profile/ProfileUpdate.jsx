@@ -31,7 +31,7 @@ const ProfileUpdate = () => {
                 if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         icon: "success",
-                        title: "Your work has been saved",
+                        title: "Your Profile Update successfully",
                         showConfirmButton: false,
                         timer: 1500
                     });

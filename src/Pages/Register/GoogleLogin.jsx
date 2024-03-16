@@ -16,6 +16,7 @@ const GoogleLogin = () => {
                 const userInfo = {
                     name: result.user.displayName,
                     email: result.user.email,
+                    avatar: result.user.photoURL,
                     position: 'Member'
                 }
                 // console.log(userInfo);
@@ -24,6 +25,19 @@ const GoogleLogin = () => {
                         console.log(res.data);
                         navigate('/')
                     })
+
+
+                const donorInfo = {
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    stauts: 'pending'
+                }
+                axiosPublic.post('/donor', donorInfo)
+                    .then(res => {
+                        console.log(res.data);
+                    })
+
+                    
             })
             .catch(error => {
                 console.log(error);

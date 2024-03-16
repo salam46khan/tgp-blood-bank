@@ -6,6 +6,11 @@ import Login from "../Pages/Register/Login";
 import SignUp from "../Pages/Register/SignUp";
 import Profile from "../Pages/Profile/Profile";
 import PrivateRouter from "./PrivateRouter";
+import Dashboard from "../layouts/Dashboard";
+import DashProfile from "../Pages/Dashboard/DashProfile";
+import DashUsers from "../Pages/Dashboard/DashUsers";
+import DashDonation from "../Pages/Dashboard/DashDonation";
+import DashDonor from "../Pages/Dashboard/DashDonor";
 
 const MainRouter = createBrowserRouter([
     {
@@ -32,6 +37,28 @@ const MainRouter = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRouter><Profile></Profile></PrivateRouter>
+            }
+        ]
+    },
+    {
+        path: 'dashboard',
+        element: <PrivateRouter><Dashboard></Dashboard></PrivateRouter>,
+        children: [
+            {
+                path: 'profile',
+                element: <DashProfile></DashProfile>
+            },
+            {
+                path: 'users',
+                element: <DashUsers></DashUsers>
+            },
+            {
+                path: 'donation',
+                element: <DashDonation></DashDonation>
+            },
+            {
+                path: 'donors',
+                element: <DashDonor></DashDonor>
             }
         ]
     }
