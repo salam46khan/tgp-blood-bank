@@ -22,7 +22,7 @@ const BloodGroupSec = () => {
                     data-aos-duration="800"
                     data-aos-easing="ease-in-out"
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-4 justify-center gap-3 w-full max-w-6xl mx-auto p-5">
+                    <div className="grid grid-cols-1 md:grid-cols-4 justify-center gap-3 w-full max-w-6xl mx-auto p-5 ">
                         {
                             bloodGroup?.map(group => <BloodGroupCard key={group._id} group={group}></BloodGroupCard>)
                         }

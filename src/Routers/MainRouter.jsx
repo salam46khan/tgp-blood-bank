@@ -11,6 +11,7 @@ import DashProfile from "../Pages/Dashboard/DashProfile";
 import DashUsers from "../Pages/Dashboard/DashUsers";
 import DashDonation from "../Pages/Dashboard/DashDonation";
 import DashDonor from "../Pages/Dashboard/DashDonor";
+import UserProfile from "../Pages/Profile/UserProfile";
 
 const MainRouter = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const MainRouter = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRouter><Profile></Profile></PrivateRouter>
+            },
+            {
+                path: '/profile/:id',
+                element: <PrivateRouter><UserProfile></UserProfile></PrivateRouter>
             }
         ]
     },
