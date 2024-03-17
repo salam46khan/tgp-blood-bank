@@ -15,7 +15,7 @@ const ReviewItem = ({ review }) => {
                 </div>
                 <div className="w-full md:w-[65%] p-3">
                     <div className="pt-6 w-full max-w-sm mx-auto text-center">
-                        <p className="font-light text-xl italic min-h-24 border flex justify-center items-center">{testimonial}</p>
+                        <p className="font-light text-xl italic min-h-24 flex justify-center items-center">{testimonial}</p>
                     </div>
                     <FaQuoteRight className="text-3xl text-red-500 mx-auto" />
 

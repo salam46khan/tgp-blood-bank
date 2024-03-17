@@ -52,8 +52,8 @@ const Banner = () => {
                         Where every drop saves a life. Join our mission of hope and healing through blood donation.
                     </p>
                     <div className="flex gap-3">
-                        <Link className="flex gap-2 items-center justify-center my-btn" to={'/signup'}><FaUserTag />Join</Link>
-                        <Link className="flex gap-2 items-center justify-center my-btn-fil" to={'/signup'}><FaSearch />Search</Link>
+                        <Link className="flex gap-2 items-center justify-center my-btn" to={'/dashboard/donation'}><FaUserTag />Join</Link>
+                        <Link className="flex gap-2 items-center justify-center my-btn-fil" to={'/donors'}><FaSearch />Search</Link>
                     </div>
 
                 </div>

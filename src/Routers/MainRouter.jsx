@@ -14,6 +14,10 @@ import DashDonor from "../Pages/Dashboard/DashDonor";
 import UserProfile from "../Pages/Profile/UserProfile";
 import DashAddReview from "../Pages/Dashboard/DashAddReview";
 import DashAllReview from "../Pages/Dashboard/DashAllReview";
+import DashAddBlog from "../Pages/Dashboard/DashAddBlog";
+import DashAllBlog from "../Pages/Dashboard/DashAllBlog";
+import DashMyBlog from "../Pages/Dashboard/DashMyBlog";
+import BlogDetails from "../Shared/BlogDetails";
 
 const MainRouter = createBrowserRouter([
     {
@@ -44,6 +48,10 @@ const MainRouter = createBrowserRouter([
             {
                 path: '/profile/:id',
                 element: <PrivateRouter><UserProfile></UserProfile></PrivateRouter>
+            },
+            {
+                path: '/blog-details/:id',
+                element: <PrivateRouter><BlogDetails></BlogDetails></PrivateRouter>
             }
         ]
     },
@@ -74,6 +82,18 @@ const MainRouter = createBrowserRouter([
             {
                 path: 'all-reviews',
                 element: <DashAllReview></DashAllReview>
+            },
+            {
+                path: 'add-blog',
+                element: <DashAddBlog></DashAddBlog>
+            },
+            {
+                path: 'all-blogs',
+                element: <DashAllBlog></DashAllBlog>
+            },
+            {
+                path: 'my-blogs',
+                element: <DashMyBlog></DashMyBlog>
             }
         ]
     }

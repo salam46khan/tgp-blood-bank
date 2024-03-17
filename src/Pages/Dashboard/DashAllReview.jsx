@@ -49,23 +49,6 @@ const DashAllReview = () => {
                                     </td>
                                 </tr>)
                             }
-
-                            {/* {
-                                users?.map(user => <tr key={user._id}>
-                                    <td><img className="h-9 w-9 rounded-full" src={user.avatar} alt="" /></td>
-                                    <td>{user.name}</td>
-                                    <td>{user.email}</td>
-                                    <td>{user.position}</td>
-                                    <td>
-                                        <select name="category" value={user.position} onChange={handlePostChange} className="select select-bordered shadow appearance-none border rounded-full  text-gray-700 select-sm leading-tight focus:outline-none caption-bottom bg-white focus:shadow-outline" id={user._id}>
-                                            <option value="Member">Member</option>
-                                            <option value="Admin">Admin</option>
-                                            <option value="Volunteer">Volunteer</option>
-
-                                        </select>
-                                    </td>
-                                </tr>)
-                            } */}
                         </tbody>
                     </table>
                 </div>

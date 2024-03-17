@@ -16,7 +16,7 @@ const Dashboard = () => {
             <NavLink to={'/dashboard/users'}>All Users</NavLink>
         </li>
         <li>
-            <NavLink to={'/dashboard/donation'}>My Donation</NavLink>
+            <NavLink to={'/dashboard/donation'}>Add My Donation</NavLink>
         </li>
         <li>
             <NavLink to={'/dashboard/donors'}>All Donors</NavLink>
@@ -26,6 +26,15 @@ const Dashboard = () => {
         </li>
         <li>
             <NavLink to={'/dashboard/all-reviews'}>All Reviews</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/dashboard/add-blog'}>Add Blog</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/dashboard/all-blogs'}>All Blogs</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/dashboard/my-blogs'}>My Blogs</NavLink>
         </li>
     </>
     return (

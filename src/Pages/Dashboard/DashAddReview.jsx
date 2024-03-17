@@ -47,8 +47,8 @@ const DashAddReview = () => {
                 </div>
 
             </div>
-            <div className="p-5">
-                <div className="p-5 bg-white rounded-lg shadow-lg shadow-[#0002]">
+            <div className="p-5 flex justify-center items-center">
+                <div className="p-5 w-full max-w-2xl bg-white rounded-lg shadow-lg shadow-[#0002]">
                     <form onSubmit={handleReview}>
                         <div className="form-control w-full">
                             <label className="label">

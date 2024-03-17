@@ -49,7 +49,7 @@ const DashDonation = () => {
     }
     return (
         <div>
-            <p className="text-3xl font-bold text-center text-cyan-600">My Donation</p>
+            <p className="text-3xl font-bold text-center text-cyan-600">Add My Donation</p>
             <div className="pt-8 p-5">
                 <div className="md:p-5 p-3 py-10 bg-white rounded-lg shadow-lg shadow-[#0002]">
                     <form onSubmit={handleMyDonation}>

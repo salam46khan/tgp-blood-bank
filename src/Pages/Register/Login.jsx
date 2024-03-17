@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginPic from '../../assets/pic/login.png'
 import GoogleLogin from './GoogleLogin';
 import { useContext } from 'react';
@@ -6,6 +6,7 @@ import { AuthContext } from '../../Profider/AuthProvider';
 const Login = () => {
 
     const {logInUser} = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleLogin = event =>{
         event.preventDefault()
         const form = event.target;
@@ -17,6 +18,7 @@ const Login = () => {
         logInUser(email, password)
         .then(result => {
             console.log(result.user);
+            navigate('/')
         })
         .catch(error=>{
             console.log(error);

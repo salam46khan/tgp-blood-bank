@@ -1,5 +1,6 @@
 import AboutSec from "./AboutSec";
 import Banner from "./Banner";
+import BlogSec from "./BlogSec";
 import BloodGroupSec from "./BloodGroupSec";
 import DonorSec from "./DonorSec";
 import FaqSec from "./FaqSec";
@@ -15,6 +16,7 @@ const Home = () => {
 
             <FaqSec></FaqSec>
             <ReviewSec></ReviewSec>
+            <BlogSec></BlogSec>
         </div>
     );
 };
