@@ -21,6 +21,12 @@ const Dashboard = () => {
         <li>
             <NavLink to={'/dashboard/donors'}>All Donors</NavLink>
         </li>
+        <li>
+            <NavLink to={'/dashboard/add-review'}>Add Review</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/dashboard/all-reviews'}>All Reviews</NavLink>
+        </li>
     </>
     return (
         <div className="container mx-auto flex flex-col md:flex-row ">

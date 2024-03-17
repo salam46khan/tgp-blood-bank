@@ -12,6 +12,8 @@ import DashUsers from "../Pages/Dashboard/DashUsers";
 import DashDonation from "../Pages/Dashboard/DashDonation";
 import DashDonor from "../Pages/Dashboard/DashDonor";
 import UserProfile from "../Pages/Profile/UserProfile";
+import DashAddReview from "../Pages/Dashboard/DashAddReview";
+import DashAllReview from "../Pages/Dashboard/DashAllReview";
 
 const MainRouter = createBrowserRouter([
     {
@@ -64,6 +66,14 @@ const MainRouter = createBrowserRouter([
             {
                 path: 'donors',
                 element: <DashDonor></DashDonor>
+            },
+            {
+                path: 'add-review',
+                element: <DashAddReview></DashAddReview>
+            },
+            {
+                path: 'all-reviews',
+                element: <DashAllReview></DashAllReview>
             }
         ]
     }

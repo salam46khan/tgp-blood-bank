@@ -31,7 +31,7 @@ const ReviewSec = () => {
                 <div className="mx-auto w-full max-w-4xl p-8">
                     <Slider {...settings}>
                         {
-                            review?.map(review => <ReviewItem key={review._id} review={review}></ReviewItem>)
+                            review?.slice(0, 5).map(review => <ReviewItem key={review._id} review={review}></ReviewItem>)
                         }
                     </Slider>
                     {/* <ReviewItem></ReviewItem> */}

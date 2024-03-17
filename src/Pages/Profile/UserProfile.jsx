@@ -19,7 +19,7 @@ const UserProfile = () => {
     console.log(userInfo);
     return (
         <div>
-            <PagesBg title={'User Profile'}></PagesBg>
+            <PagesBg title={`${name} Profile`}></PagesBg>
             <div className="container mx-auto py-12 px-3 flex justify-center items-center">
                 <div className="my-10 bg-slate-50 w-full max-w-xl rounded-lg shadow-xl shadow-[#0003] overflow-hidden">
                     <div className="h-[220px] relative">
