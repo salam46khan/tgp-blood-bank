@@ -18,6 +18,12 @@ import DashAddBlog from "../Pages/Dashboard/DashAddBlog";
 import DashAllBlog from "../Pages/Dashboard/DashAllBlog";
 import DashMyBlog from "../Pages/Dashboard/DashMyBlog";
 import BlogDetails from "../Shared/BlogDetails";
+import DashAddStory from "../Pages/Dashboard/DashAddStory";
+import DashAllStory from "../Pages/Dashboard/DashAllStory";
+import SuccessStory from "../Pages/SuccessStory/SuccessStory";
+import Blog from "../Pages/Blog/Blog";
+import StoryDetails from "../Pages/SuccessStory/StoryDetails";
+import Donors from "../Pages/Donors/Donors";
 
 const MainRouter = createBrowserRouter([
     {
@@ -31,7 +37,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <PrivateRouter> <p>about</p> </PrivateRouter>
+                element: <p>ji</p>
             },
             {
                 path: '/login',
@@ -52,6 +58,22 @@ const MainRouter = createBrowserRouter([
             {
                 path: '/blog-details/:id',
                 element: <PrivateRouter><BlogDetails></BlogDetails></PrivateRouter>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/stories',
+                element: <SuccessStory></SuccessStory>
+            },
+            {
+                path: '/story/:id',
+                element: <PrivateRouter><StoryDetails></StoryDetails></PrivateRouter>
+            },
+            {
+                path: '/donors',
+                element: <Donors></Donors>
             }
         ]
     },
@@ -94,6 +116,14 @@ const MainRouter = createBrowserRouter([
             {
                 path: 'my-blogs',
                 element: <DashMyBlog></DashMyBlog>
+            },
+            {
+                path: 'add-success-story',
+                element: <DashAddStory></DashAddStory>
+            },
+            {
+                path: 'all-success-story',
+                element: <DashAllStory></DashAllStory>
             }
         ]
     }

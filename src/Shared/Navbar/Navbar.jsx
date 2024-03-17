@@ -28,6 +28,9 @@ const Navbar = () => {
         <li>
             <NavLink to={'/donation-req'}>Donation Request</NavLink>
         </li>
+        <li>
+            <NavLink to={'/stories'}>Success Story</NavLink>
+        </li>
         {
             user ?
             <li>

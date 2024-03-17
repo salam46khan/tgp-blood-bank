@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BlogCard from "../../Components/BlogCard";
 import useBlog from "../../hooks/useBlog";
 
@@ -20,6 +21,11 @@ const BlogSec = () => {
                     {
                         blog?.slice(0,6).map(blog => <BlogCard key={blog._id} blog={blog}></BlogCard>)
                     }
+                </div>
+                <div className="mt-8 flex justify-center mb-4">
+                    <Link to={'/blog'}>
+                        <button className="my-btn">View More</button>
+                    </Link>
                 </div>
             </div>
         </div>

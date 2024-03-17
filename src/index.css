@@ -149,13 +149,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* .faq-bg {
+.review-bg {
   background: linear-gradient(120deg, #000000ac, #0000006c), url('./assets/pic/faqbg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-} */
+}
 .blood-group-bg {
   background: linear-gradient(120deg, #000000ac, #0000006c), url('./assets/pic/blood-group.png');
   background-position: center;

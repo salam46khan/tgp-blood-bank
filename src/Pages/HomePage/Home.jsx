@@ -5,6 +5,7 @@ import BloodGroupSec from "./BloodGroupSec";
 import DonorSec from "./DonorSec";
 import FaqSec from "./FaqSec";
 import ReviewSec from "./ReviewSec";
+import StorySec from "./StorySec";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <DonorSec></DonorSec>
 
             <FaqSec></FaqSec>
+            <StorySec></StorySec>
             <ReviewSec></ReviewSec>
             <BlogSec></BlogSec>
         </div>
