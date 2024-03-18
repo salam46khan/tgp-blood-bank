@@ -6,8 +6,8 @@ const AboutSec = () => {
         <div className="py-14 px-3">
             <div className="container mx-auto flex flex-col md:flex-row gap-5 items-center">
                 <div className="w-full md:w-1/2"
-                    data-aos="zoom-in-right"
-                    data-aos-duration="800"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
                     data-aos-easing="ease-in-out"
                 >
                     <div className=" pb-24 pr-24 relative">
@@ -16,8 +16,8 @@ const AboutSec = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-1/2 md:px-5' 
-                    data-aos="zoom-in-left"
-                    data-aos-duration="800"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
                     data-aos-easing="ease-in-out"
                 >
                     <p className='text-4xl font-bold text-cyan-600'>About Us</p>

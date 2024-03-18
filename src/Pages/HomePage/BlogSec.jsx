@@ -17,10 +17,16 @@ const BlogSec = () => {
                     <p className="text-slate-400 text-xl">Join hands with us to save lives through blood donation. Every drop counts, and your contribution can make a significant difference</p>
                 </div>
 
-                <div className="flex mt-5 justify-center items-stretch flex-wrap gap-5">
-                    {
-                        blog?.slice(0,3).map(blog => <BlogCard key={blog._id} blog={blog}></BlogCard>)
-                    }
+                <div 
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out"
+                >
+                    <div className="flex mt-5 justify-center items-stretch flex-wrap gap-5">
+                        {
+                            blog?.slice(0, 3).map(blog => <BlogCard key={blog._id} blog={blog}></BlogCard>)
+                        }
+                    </div>
                 </div>
                 <div className="mt-8 flex justify-center mb-4">
                     <Link to={'/blog'}>

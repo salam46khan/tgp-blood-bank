@@ -18,7 +18,11 @@ const DonorSec = () => {
                     <hr className='border-2 border-red-500 w-1/3 my-2 mx-auto' />
                     <p className="text-slate-400 text-xl">Join hands with us to save lives through blood donation. Every drop counts, and your contribution can make a significant difference</p>
                 </div>
-                <div className="mt-5">
+                <div className="mt-5"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out"
+                >
                     <div className="flex flex-col md:flex-row justify-center gap-5 items-center flex-wrap">
                         {
                             newDonor?.map(donor => <DonorCard key={donor._id} donor={donor}></DonorCard>)
