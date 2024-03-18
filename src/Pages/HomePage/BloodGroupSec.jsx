@@ -1,13 +1,13 @@
-import { useEffect } from "react";
-import BloodGroupCard from "../../Components/BloodGroupCard/BloodGroupCard";
-import useBloodGroup from "../../hooks/useBloodGroup";
+// import { useEffect } from "react";
+// import BloodGroupCard from "../../Components/BloodGroupCard/BloodGroupCard";
+// import useBloodGroup from "../../hooks/useBloodGroup";
 import useReadyDonor from "../../hooks/useReadyDonor";
 import { BsDropletFill } from "react-icons/bs";
 
 
 
 const BloodGroupSec = () => {
-    const [bloodGroup] = useBloodGroup()
+    // const [bloodGroup] = useBloodGroup()
     const [readyDonor] = useReadyDonor()
     // useEffect(() => {
     //     const ap = readyDonor?.filter(a => a.bloodGroup === "AB+")
