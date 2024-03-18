@@ -109,8 +109,8 @@ const DashAddStory = () => {
                                 </label>
                                 <textarea type="text" name='story' placeholder="share success story here" className="textarea textarea-bordered rounded-3xl" />
                             </div>
-                            <div className="form-control w-full mt-5 flex justify-center items-center">
-                                <input type="submit" className="my-btn w-full hover:bg-red-500 duration-200 cursor-pointer max-w-72" value="Post Success Story" />
+                            <div className="mt-5 flex justify-center items-center">
+                                <input type="submit" className="my-btn hover:bg-red-500 cursor-pointer " value="Post Success Story" />
                             </div>
                         </form>
                     </div>

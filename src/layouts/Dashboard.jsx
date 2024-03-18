@@ -52,8 +52,15 @@ const Dashboard = () => {
                 <li>
                     <NavLink to={'/dashboard/my-blogs'}>My Blogs</NavLink>
                 </li>
-
-                {/* todo: add donate request access  */}
+                <li>
+                    <NavLink to={'/dashboard/my-request'}>My Request</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/dashboard/donation-req'}>Donation Request</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/dashboard/req-interest'}>Request Interested</NavLink>
+                </li>
             </>
         }
         {
@@ -92,11 +99,22 @@ const Dashboard = () => {
                 <li>
                     <NavLink to={'/dashboard/all-success-story'}>All Success Story</NavLink>
                 </li>
+                <li>
+                    <NavLink to={'/dashboard/donation-req'}>Donation Request</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/dashboard/my-request'}>My Request</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/dashboard/all-request'}>All Request</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/dashboard/req-interest'}>Request Interested</NavLink>
+                </li>
+
             </>
         }
-        {/* <li>
-            <NavLink to={'/dashboard/profile'}>My Profile</NavLink>
-        </li> */}
+
         {/* <li>
             <NavLink to={'/dashboard/users'}>All Users</NavLink>
         </li> */}
@@ -114,10 +132,13 @@ const Dashboard = () => {
             <NavLink to={'/dashboard/add-blog'}>Add Blog</NavLink>
         </li> */}
         {/* <li>
-            <NavLink to={'/dashboard/all-blogs'}>All Blogs</NavLink>
-        </li> */}
-        {/* <li>
-            <NavLink to={'/dashboard/my-blogs'}>My Blogs</NavLink>
+            <NavLink to={'/dashboard/all-request'}>All Request</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/dashboard/my-request'}>My Request</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/dashboard/donation-req'}>Donation Request</NavLink>
         </li> */}
         {/* <li>
             <NavLink to={'/dashboard/add-success-story'}>Add Success Story</NavLink>
@@ -125,6 +146,7 @@ const Dashboard = () => {
         <li>
             <NavLink to={'/dashboard/all-success-story'}>All Success Story</NavLink>
         </li> */}
+
     </>
     return (
         <div className="container mx-auto flex flex-col md:flex-row ">

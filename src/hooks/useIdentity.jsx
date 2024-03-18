@@ -6,14 +6,14 @@ import { AuthContext } from "../Profider/AuthProvider";
 const useIdentity = () => {
     const axiosPublic = useAxiosPublic()
     const {user} = useContext(AuthContext)
-    const {refetch, data: identity = {}} =useQuery({
+    const {refetch, data: identity = {}, isLoading} =useQuery({
         queryKey: ['identity', user.email],
         queryFn: async () => {
             const res = await axiosPublic.get(`user?email=${user.email}`)
             return res.data
         }
     })
-    return [identity, refetch]
+    return [identity, refetch, isLoading]
 };
 
 export default useIdentity;

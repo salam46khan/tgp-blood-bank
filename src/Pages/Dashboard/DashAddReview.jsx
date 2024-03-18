@@ -62,8 +62,8 @@ const DashAddReview = () => {
                             </label>
                             <textarea type="text" name='testimonial' placeholder="share your opinion here" className="textarea textarea-bordered rounded-3xl" />
                         </div>
-                        <div className="form-control w-full mt-5 flex justify-center items-center">
-                            <input type="submit" className="my-btn w-full hover:bg-red-500 duration-200 cursor-pointer max-w-72" value="Submit Review" />
+                        <div className=" mt-5 flex justify-center items-center">
+                            <input type="submit" className="my-btn  hover:bg-red-500 cursor-pointer " value="Submit Review" />
                         </div>
                     </form>
                 </div>

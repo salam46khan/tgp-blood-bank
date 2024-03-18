@@ -24,6 +24,14 @@ import SuccessStory from "../Pages/SuccessStory/SuccessStory";
 import Blog from "../Pages/Blog/Blog";
 import StoryDetails from "../Pages/SuccessStory/StoryDetails";
 import Donors from "../Pages/Donors/Donors";
+import DashDonationReq from "../Pages/Dashboard/DashDonationReq";
+import DashMyRequest from "../Pages/Dashboard/DashMyRequest";
+import DashAllRequest from "../Pages/Dashboard/DashAllRequest";
+import AdminRouter from "./AdminRouter";
+import VolunteerRouter from "./VolunteerRouter";
+import DonationReq from "../Pages/DonationReq/DonationReq";
+import DashReqInterest from "../Pages/Dashboard/DashReqInterest";
+import About from "../Pages/About/About";
 
 const MainRouter = createBrowserRouter([
     {
@@ -37,7 +45,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <p>ji</p>
+                element: <About></About>
             },
             {
                 path: '/login',
@@ -74,7 +82,11 @@ const MainRouter = createBrowserRouter([
             {
                 path: '/donors',
                 element: <Donors></Donors>
-            }
+            },
+            {
+                path: '/donation-req',
+                element: <DonationReq></DonationReq>
+            },
         ]
     },
     {
@@ -87,7 +99,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'users',
-                element: <DashUsers></DashUsers>
+                element: <AdminRouter><DashUsers></DashUsers></AdminRouter>
             },
             {
                 path: 'donation',
@@ -95,7 +107,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'donors',
-                element: <DashDonor></DashDonor>
+                element: <AdminRouter><DashDonor></DashDonor></AdminRouter>
             },
             {
                 path: 'add-review',
@@ -103,7 +115,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'all-reviews',
-                element: <DashAllReview></DashAllReview>
+                element: <AdminRouter><DashAllReview></DashAllReview></AdminRouter>
             },
             {
                 path: 'add-blog',
@@ -111,7 +123,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'all-blogs',
-                element: <DashAllBlog></DashAllBlog>
+                element: <AdminRouter><DashAllBlog></DashAllBlog></AdminRouter>
             },
             {
                 path: 'my-blogs',
@@ -119,11 +131,27 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'add-success-story',
-                element: <DashAddStory></DashAddStory>
+                element: <AdminRouter><DashAddStory></DashAddStory></AdminRouter>
             },
             {
                 path: 'all-success-story',
-                element: <DashAllStory></DashAllStory>
+                element: <AdminRouter><DashAllStory></DashAllStory></AdminRouter>
+            },
+            {
+                path: 'donation-req',
+                element: <VolunteerRouter><DashDonationReq></DashDonationReq></VolunteerRouter>
+            },
+            {
+                path: 'my-request',
+                element: <VolunteerRouter><DashMyRequest></DashMyRequest></VolunteerRouter>
+            },
+            {
+                path: 'all-request',
+                element:  <AdminRouter><DashAllRequest></DashAllRequest></AdminRouter>
+            },
+            {
+                path: 'req-interest',
+                element: <VolunteerRouter><DashReqInterest></DashReqInterest></VolunteerRouter>
             }
         ]
     }

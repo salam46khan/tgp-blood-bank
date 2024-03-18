@@ -5,7 +5,7 @@ import DonorCard from "../../Components/DonorCard";
 
 const Donors = () => {
     const [readyDonor] = useReadyDonor();
-    const [donor, setDonor] = useState(readyDonor)
+    const [donor, setDonor] = useState(readyDonor);
     return (
         <div>
             <PagesBg title={'All Donors'}></PagesBg>

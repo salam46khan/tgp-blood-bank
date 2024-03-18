@@ -11,7 +11,7 @@ const Footer = () => {
                         <p className="text-slate-200">Let&apos;s get Start!</p>
                     </div>
                     <div>
-                        <Link className="my-btn-white" to={'/'}>
+                        <Link className="my-btn-white" to={'/dashboard/donation'}>
                             Donate
                         </Link>
                     </div>

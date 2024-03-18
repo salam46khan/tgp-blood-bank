@@ -13,7 +13,7 @@ const DonateQuote = () => {
                 </p>
             </div>
             <div className="p-5">
-                <Link to={'/'} className="my-btn">Donate</Link>
+                <Link to={'/dashboard/donation'} className="my-btn">Donate</Link>
             </div>
         </div>
     );

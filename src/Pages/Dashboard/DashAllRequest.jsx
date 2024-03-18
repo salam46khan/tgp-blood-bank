@@ -1,20 +1,20 @@
 import Swal from "sweetalert2";
+import useAllRequest from "../../hooks/useAllRequest";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
-import useStory from "../../hooks/useStory";
 
-const DashAllStory = () => {
-    const [story, refetch] = useStory();
+const DashAllRequest = () => {
+    const [allRequest, refetch] = useAllRequest();
     const axiosPublic = useAxiosPublic()
 
-    const handleStoryDelete = id => {
+    const handleReqDelete = id => {
         console.log(id);
-        axiosPublic.delete(`/story/${id}`)
+        axiosPublic.delete(`/request/${id}`)
             .then(res => {
                 console.log(res.data);
                 if (res.data.deletedCount > 0) {
                     Swal.fire({
                         icon: "success",
-                        title: "Success Story delete Successfully",
+                        title: "Request delete Successfully",
                         showConfirmButton: false,
                         timer: 1500
                     });
@@ -24,7 +24,7 @@ const DashAllStory = () => {
     }
     return (
         <div>
-            <p className="text-3xl font-bold text-center text-cyan-600">All Success Story</p>
+            <p className="text-3xl font-bold text-center text-cyan-600">All Request</p>
             <div className="p-5">
                 <div className="md:p-5 bg-white rounded-lg shadow-lg shadow-[#0002] flex flex-col md:flex-row justify-center items-center gap-5">
 
@@ -33,29 +33,29 @@ const DashAllStory = () => {
                         <thead>
                             <tr className="bg-red-50 text-cyan-600">
                                 <th>Photo</th>
-                                <th>Date</th>
-                                <th>Title</th>
-                                <th>Donor</th>
+                                <th>Requester</th>
                                 <th>Patient</th>
-                                <th>Disease</th>
+                                <th>Blood</th>
+                                <th>Donation Date</th>
+                                <th>Status</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                story?.map(story => <tr key={story._id}>
-                                    <td><img className="h-9 w-14" src={story.photo} alt="" /></td>
-                                    <td>{story.donationDate}</td>
-                                    <td>{story.title}</td>
-                                    <td>{story.donor}</td>
-                                    <td>{story.patient}</td>
-                                    <td>{story.disease}</td>
+                                allRequest?.map(req => <tr key={req._id}>
+                                    <td><img className="h-9 w-14" src={req.photo} alt="" /></td>
+                                    <td>{req.reqName}</td>
+                                    <td>{req.patient}</td>
+                                    <td>{req.bloodGroup}</td>
+                                    <td>{req.donationDate}</td>
+                                    <td>{req.status}</td>
                                     <td>
-                                        <button onClick={() => handleStoryDelete(story._id)} className="btn-sm rounded-full bg-red-100 text-red-500 hover:text-white hover:bg-red-500 duration-200">Delete</button>
+                                        <button onClick={() => handleReqDelete(req._id)} className="btn-sm rounded-full bg-red-100 text-red-500 hover:text-white hover:bg-red-500 duration-200">Delete</button>
                                     </td>
                                 </tr>)
                             }
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -64,4 +64,4 @@ const DashAllStory = () => {
     );
 };
 
-export default DashAllStory;
+export default DashAllRequest;

@@ -19,7 +19,7 @@ const BlogSec = () => {
 
                 <div className="flex mt-5 justify-center items-stretch flex-wrap gap-5">
                     {
-                        blog?.slice(0,6).map(blog => <BlogCard key={blog._id} blog={blog}></BlogCard>)
+                        blog?.slice(0,3).map(blog => <BlogCard key={blog._id} blog={blog}></BlogCard>)
                     }
                 </div>
                 <div className="mt-8 flex justify-center mb-4">
