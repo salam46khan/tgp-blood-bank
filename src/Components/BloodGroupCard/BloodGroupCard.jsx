@@ -2,8 +2,8 @@ import './BloodGroupCard.css';
 import PropTypes from 'prop-types';
 import { BsDropletFill } from "react-icons/bs";
 
-const BloodGroupCard = ({ group }) => {
-    const { bloodGroup, donorQuantity } = group;
+const BloodGroupCard = ({ blood, donar}) => {
+    
     return (
         <div className=" blood-flip-card">
             <div className='face front'>
@@ -11,7 +11,7 @@ const BloodGroupCard = ({ group }) => {
                     <div className='absolute bottom-0 right-0 h-[50px] w-[50px] rounded-full border-2 border-red-500 bg-[#fee] flex justify-center items-center'>
                         <BsDropletFill className='text-2xl text-red-500' />
                     </div>
-                    <p className='text-5xl text-cyan-600 font-bold'>{bloodGroup}</p>
+                    <p className='text-5xl text-cyan-600 font-bold'>{blood}</p>
                 </div>
             </div>
             <div className='face back flex flex-col'>
@@ -19,14 +19,15 @@ const BloodGroupCard = ({ group }) => {
                 <div className='text-center mb-5'>
                     <BsDropletFill className='text-4xl text-red-500' />
                 </div>
-                <p className='text-white font-bold text-4xl'>{donorQuantity}</p>
+                <p className='text-white font-bold text-4xl'>{donar.length}</p>
                 <p className='text-slate-200 font-semibold text-xl uppercase pt-2'>Donors</p>
             </div>
         </div>
     );
 };
 BloodGroupCard.propTypes = {
-    group: PropTypes.object
+    blood: PropTypes.string,
+    donar: PropTypes.array
 }
 
 export default BloodGroupCard;
