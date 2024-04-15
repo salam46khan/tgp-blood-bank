@@ -1,8 +1,13 @@
-# React + Vite
+# TGP Blood Bank
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### live link : [TGP Blood bank](https://tgp-blood-bank.web.app/)
+### Client side link : [Github Link](https://github.com/salam46khan/tgp-blood-bank)
+### Server side link : [Github link](https://github.com/salam46khan/tgp-blood-bank-server)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Secure sign-up and login system for users.
+- **User Roles**: Different roles for volunteers, administrators, and donors.
+- **Donation Requests**: Posting and managing donation requests.
+- **Donor Interaction**: Donors can express interest and communicate with volunteers/admins.
+- **Feedback System**: Users can share opinions and suggestions.
